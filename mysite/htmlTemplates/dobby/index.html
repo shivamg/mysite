@@ -1,0 +1,18 @@
+
+{% if products %}
+    <ul>
+    {% for product in products %}
+        <li>
+					<a href= {{product.href}}>
+						<img src= {{product.imgHref}} />
+						<span class="title"><br>{{product.name}}</span>
+					</a>
+					
+							<div class="price">{{product.price}}</div>
+					
+		</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}

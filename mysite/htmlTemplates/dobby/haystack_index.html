@@ -1,0 +1,17 @@
+{% if products %}
+    <ul>
+    {% for product in products %}
+        <li>
+					<a href= {{product.object.href}}>
+
+						<span class="title"><br>{{product.object.name}}</span>
+					</a>
+					        <div class="img">{{product.object.imghref}}</div>
+							<div class="price">{{product.object.price}}</div>
+					
+		</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
